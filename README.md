@@ -5,7 +5,7 @@ Multi-chat and Multi-room Web Application
 
 ####Development
 
-1. `git clone https://github.com/admix/eventfeed.me`
+1. `git clone https://github.com/admix/multi-chat`
 2. `npm install` - install all npm modules
 3. `cp env.dev .env` - setup env variables for your dev
 4. `node app.js` - starts app on :80 or :8080 for localhost port
