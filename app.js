@@ -2,8 +2,12 @@ var http = require("http"),
     fs = require("fs"),
     path = require("path"),
     mime = require("mime"),
-    port = 8000,
+    habitat = require("habitat"),
     cache = {};
+
+habitat.load();
+var env = new habitat(),
+    port = Number(env.get("PORT") || 8080);
 
 var server = http.createServer(function(request, response) {
   var filePath = false;

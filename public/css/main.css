@@ -1,0 +1,74 @@
+/* Reset */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font: 14px "lucida Grande", Helvetica, Arial, sans-serif;
+  background: #0e1d3a url(../images/bg.png) top center no-repeat;
+}
+
+a {
+  color: #00B7FF;
+}
+/* Application sizes */
+#content {
+  width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Room name displayed */
+#room {
+  background-color: #ddd;
+  margin-bottom: 1em;
+}
+
+/* Message display area. Scrolling enabled when message box full. */
+#messages {
+  width: 690px;
+  height: 300px;
+  overflow: auto;
+  background-color: #eee;
+  margin-bottom: 1em;
+  margin-right: 10px;
+}
+
+.header {
+  width: 940px;
+  float: left;
+  margin-top: -18px;
+}
+
+a.logo {
+  width: 418px;
+  padding-top: 20px;
+  margin: 0 auto;
+  height: 145px;
+  text-align: center;
+  font-size: 31px;
+  color: #fff;
+  display: block;
+  background: url(../images/logo.png) left bottom no-repeat;
+}
+
+a.logo span {
+  display: block;
+  font-size: 10px;
+  font-family: Bell Gothic Std;
+  font-weight: 100;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+}
+#help {
+  color: #fff;
+  padding-top: 5px;
+}
+#help ul,li {
+  padding-top: 5px;
+  padding-left: 15px;
+  list-style-type: none;
+}

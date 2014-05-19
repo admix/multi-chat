@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "Multichat & Multiroom Web Application",
   "dependencies": {
+    "habitat": "0.4.1",
     "socket.io": "~0.9.15",
     "mime": "~1.2.7"
   }
