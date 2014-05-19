@@ -8,3 +8,6 @@ Multi-chat
 
 ## Description
 Multi-chat and Multi-room Web Application
+1. Serving static files to the user's web browser
+2. Handling chat-related messaging on the server
+3. Handling chat-related messaging in the user's web browser
