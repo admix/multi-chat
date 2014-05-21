@@ -26,6 +26,10 @@ server.listen(port, function() {
   console.log("Server listening on port: " + port);
 })
 
+// socket.io server
+var chatServer = require('./lib/chat_server');
+chatServer.listen(server);
+
 // 404 Error
 function send404(response) {
   response.writeHead(404, {'Content-Type': 'text/plain'});
