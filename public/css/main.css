@@ -63,12 +63,36 @@ a.logo span {
   text-align: center;
   letter-spacing: 1px;
 }
+
 #help {
   color: #fff;
   padding-top: 5px;
+  font: 10px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
+
 #help ul,li {
   padding-top: 5px;
   padding-left: 15px;
   list-style-type: none;
+}
+
+#room-list {
+  float: right;
+  width: 100px;
+  height: 300px;
+  overflow: auto;
+}
+
+#room-list div {
+  border-bottom: 1px solid #eee;
+}
+
+#room-list div:hover {
+  background-color: #ddd;
+}
+
+#send-message {
+  width: 700px;
+  margin-bottom: 1em;
+  margin-right: 1em;
 }
