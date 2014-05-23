@@ -15,6 +15,11 @@ body {
 a {
   color: #00B7FF;
 }
+
+span {
+  color: #ff0000;
+}
+
 /* Application sizes */
 #content {
   width: 940px;
@@ -24,18 +29,21 @@ a {
 
 /* Room name displayed */
 #room {
+  width: 60%;
   background-color: #ddd;
   margin-bottom: 1em;
+  margin-left: 10px;
 }
 
 /* Message display area. Scrolling enabled when message box full. */
 #messages {
-  width: 690px;
+  width: 60%;
   height: 300px;
   overflow: auto;
   background-color: #eee;
   margin-bottom: 1em;
   margin-right: 10px;
+  margin-left: 10px;
 }
 
 .header {
@@ -68,8 +76,9 @@ a.logo span {
 
 #help {
   color: #fff;
-  font: 10px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 13px "Lucida Grande", Helvetica, Arial, sans-serif;
   margin: 0px;
+  margin-left: 10px;
 }
 
 #help ul,li {
@@ -77,9 +86,16 @@ a.logo span {
   padding-left: 15px;
   list-style-type: none;
 }
-
+#avRooms {
+  float: right;
+  margin-right: 190px;
+  overflow: auto;
+  color: #fff;
+}
 #room-list {
   float: right;
+  margin-right: 200px;
+  margin-top:10px;
   width: 100px;
   height: 300px;
   overflow: auto;
@@ -96,9 +112,10 @@ a.logo span {
 }
 
 #send-message {
-  width: 690px;
+  width: 50%;
   margin-bottom: 1em;
   margin-right: 1em;
+  margin-left: 10px;
   font-size: 18px;
 }
 

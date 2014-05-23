@@ -15,7 +15,7 @@ $(document).ready(function() {
   });
 
   socket.on('joinResult', function(result) {
-    $('#room').text(result.room);
+    $('#room').html("<span>Room: </span>").append(result.room);
     $('#messages').append(divSystemContentElement('Room changed.'));
   });
 
@@ -30,7 +30,7 @@ $(document).ready(function() {
     for(var room in rooms) {
       room = room.substring(1, room.length);
       if (room != '') {
-        $('#room-list').append(divEscapedContentElement(room));
+        $('#room-list').append(divEscapedContentElementRoom(room));
       }
     }
 
@@ -50,6 +50,10 @@ $(document).ready(function() {
     return false;
   });
 });
+
+function divEscapedContentElementRoom(message) {
+  return $('<div class="btn btn-info btn-sm"></div>').text(message);
+}
 
 function divEscapedContentElement(message) {
   return $('<div></div>').text(message);
