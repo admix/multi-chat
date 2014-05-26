@@ -20,8 +20,7 @@ $(document).ready(function() {
   });
 
   socket.on('message', function(message) {
-    console.log("in here")
-    var newElement = $('<div>yoyo</div>').text(message.text);
+    var newElement = $('<div></div>').text(message.text);
     $('#messages').append(newElement);
   });
 
