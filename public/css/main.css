@@ -32,8 +32,12 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
     overflow: auto;
     color: #ff0000;
   }
-  #room, #messages {
+  #room {
     width: 60%;
+  }
+  #messages {
+    width: 60%;
+    height: 300px;
   }
 }
 /* Landscape phones and down */
@@ -67,8 +71,12 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
     overflow: auto;
     color: #ff0000;
   }
-  #room, #messages {
+  #room {
     width: 75%;
+  }
+  #messages {
+    width: 75%;
+    height: 160px;
   }
 }
 html, body {
@@ -96,7 +104,6 @@ span {
 
 /* Message display area. Scrolling enabled when message box full. */
 #messages {
-  height: 300px;
   overflow: auto;
   background-color: #eee;
   margin-bottom: 1em;
