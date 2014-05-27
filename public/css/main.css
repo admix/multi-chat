@@ -4,6 +4,73 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
   margin: 0;
   padding: 0;
 }
+/* Large Displays */
+@media (min-width: 980px) {
+  #content {
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .header {
+    padding-top: 10px;
+    width: 940px;
+    margin-top: -18px;
+  }
+  #avRooms {
+    float: right;
+    margin-right: 190px;
+    overflow: auto;
+    color: #fff;
+  }
+  #room-list {
+    float: right;
+    margin-right: 200px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 100px;
+    height: 300px;
+    overflow: auto;
+    color: #ff0000;
+  }
+  #room, #messages {
+    width: 60%;
+  }
+}
+/* Landscape phones and down */
+@media (max-width: 480px){
+  .copy{
+    padding: 2.5% 10%;
+  }
+  #content {
+    width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .header {
+    padding-top: 10px;
+    width: 100%;
+    margin-top: -18px;
+  }
+  #avRooms {
+    float: left;
+    padding-left: 10%;
+    overflow: auto;
+    color: #fff;
+  }
+  #room-list {
+    float: left;
+    padding-left: 10%;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    width: 100px;
+    overflow: auto;
+    color: #ff0000;
+  }
+  #room, #messages {
+    width: 75%;
+  }
+}
 html, body {
   height: 100%
 }
@@ -20,16 +87,8 @@ span {
   color: #ff0000;
 }
 
-/* Application sizes */
-#content {
-  width: 940px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /* Room name displayed */
 #room {
-  width: 60%;
   background-color: #ddd;
   margin-bottom: 1em;
   margin-left: 10px;
@@ -37,19 +96,12 @@ span {
 
 /* Message display area. Scrolling enabled when message box full. */
 #messages {
-  width: 60%;
   height: 300px;
   overflow: auto;
   background-color: #eee;
   margin-bottom: 1em;
   margin-right: 10px;
   margin-left: 10px;
-}
-
-.header {
-  padding-top: 10px;
-  width: 940px;
-  margin-top: -18px;
 }
 
 a.logo {
@@ -86,22 +138,6 @@ a.logo span {
   padding-left: 15px;
   list-style-type: none;
 }
-#avRooms {
-  float: right;
-  margin-right: 190px;
-  overflow: auto;
-  color: #fff;
-}
-#room-list {
-  float: right;
-  margin-right: 200px;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  width: 100px;
-  height: 300px;
-  overflow: auto;
-  color: #ff0000;
-}
 
 #room-list div {
   border-bottom: 1px solid #eee;
@@ -122,6 +158,7 @@ a.logo span {
 
 footer {
   margin: auto;
+  margin-top: 10px;
   bottom: 3;
   width: inherit;
   text-align: center;
