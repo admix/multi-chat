@@ -110,7 +110,12 @@ span {
   margin-right: 10px;
   margin-left: 10px;
 }
-
+#msg {
+  border: 2px solid #000;
+  background-color: #AC66D5;
+  border-radius: 5px;
+  padding: 1px;
+}
 a.logo {
   width: 418px;
   padding-top: 10px;
