@@ -127,6 +127,9 @@ span {
 }
 
 #msg_system {
+  display: inline-block;
+  float: left;
+  clear: both;
   font-weight: bold;
   font-style: italic;
   color: #FF0700;
