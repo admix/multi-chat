@@ -22,6 +22,7 @@ $(document).ready(function() {
   socket.on('message', function(message) {
     var newElement = $('<div id="msg"></div>').text(message.text);
     $('#messages').append(newElement);
+    $('#messages').scrollTop($('#messages').prop('scrollHeight'));
   });
 
   socket.on('rooms', function(rooms) {
