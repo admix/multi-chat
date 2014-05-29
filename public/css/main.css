@@ -110,11 +110,26 @@ span {
   margin-right: 10px;
   margin-left: 10px;
 }
-#msg {
+/* message boxes */
+#msg, #msg_user {
+  display: inline-block;
+  float: left;
+  clear: both;
   border: 2px solid #000;
-  background-color: #AC66D5;
   border-radius: 5px;
   padding: 1px;
+}
+#msg {
+  background-color: #AC66D5;
+}
+#msg_user {
+  background-color: #83F03C;
+}
+
+#msg_system {
+  font-weight: bold;
+  font-style: italic;
+  color: #FF0700;
 }
 a.logo {
   width: 418px;

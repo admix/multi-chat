@@ -56,11 +56,11 @@ function divEscapedContentElementRoom(message) {
 }
 
 function divEscapedContentElement(message) {
-  return $('<div></div>').text(message);
+  return $('<div id="msg_user"></div>').text(message);
 }
 
 function divSystemContentElement(message) {
-  return $('<div></div>').html('<i>' + message + '</i>');
+  return $('<div id="msg_system"></div>').html('<i>' + message + '</i>');
 }
 
 function processUserInput(chatApp, socket) {
