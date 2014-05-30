@@ -1,5 +1,6 @@
 Multi-chat and Multi-room Web Application
 ==========
+try here -> [dev.eventfeed.me](http://dev.eventfeed.me)
 
 ## Short info to start
 
