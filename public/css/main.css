@@ -26,8 +26,6 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
     color: #fff;
   }
   #room-list {
-    margin-right: 200px;
-    margin-top: 10px;
     margin-bottom: 5px;
     width: 100px;
     height: 100px;
@@ -35,10 +33,13 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
     color: #ff0000;
   }
   #names {
-    margin-top: 10px;
     margin-bottom: 5px;
     width: 100px;
+    padding: 2px;
+    height: 105px;
     overflow: auto;
+    background-color: #eee;
+    border-radius: 5px;
   }
   #room {
     width: 60%;
@@ -117,6 +118,7 @@ span {
   margin-bottom: 1em;
   margin-right: 10px;
   margin-left: 10px;
+  border-radius: 5px;
 }
 /* message boxes */
 #msg, #msg_user {
@@ -186,10 +188,6 @@ a.logo span {
   cursor: pointer;
 }
 
-#names {
-  color: #FFDD40;
-
-}
 #send-message {
   width: 50%;
   margin-bottom: 1em;

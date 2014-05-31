@@ -8,8 +8,11 @@ $(document).ready(function() {
 
     if (result.success) {
       message = 'You are now known as ' + result.name + '.';
-      $('#names').append(result.name);
-      console.log(result.name);
+      if (result.prevName) {
+        $('#names:contains("'+result.prevName+'")').text("");
+      }
+      $('#names').append(result.name + "<br>");
+      $('#names').scrollTop($('#names').prop('scrollHeight'));
     } else {
       message = result.message;
     }
