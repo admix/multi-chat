@@ -8,6 +8,8 @@ $(document).ready(function() {
 
     if (result.success) {
       message = 'You are now known as ' + result.name + '.';
+      $('#names').append(result.name);
+      console.log(result.name);
     } else {
       message = result.message;
     }

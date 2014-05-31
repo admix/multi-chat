@@ -16,21 +16,29 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
     width: 940px;
     margin-top: -18px;
   }
-  #avRooms {
+  #right {
+    display: inline-block;
     float: right;
+  }
+  #avRooms, #users_online {
     margin-right: 190px;
     overflow: auto;
     color: #fff;
   }
   #room-list {
-    float: right;
     margin-right: 200px;
     margin-top: 10px;
     margin-bottom: 5px;
     width: 100px;
-    height: 300px;
+    height: 100px;
     overflow: auto;
     color: #ff0000;
+  }
+  #names {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 100px;
+    overflow: auto;
   }
   #room {
     width: 60%;
@@ -178,6 +186,10 @@ a.logo span {
   cursor: pointer;
 }
 
+#names {
+  color: #FFDD40;
+
+}
 #send-message {
   width: 50%;
   margin-bottom: 1em;
