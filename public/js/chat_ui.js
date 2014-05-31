@@ -9,7 +9,10 @@ $(document).ready(function() {
     if (result.success) {
       message = 'You are now known as ' + result.name + '.';
       if (result.prevName) {
-        $('#names:contains("'+result.prevName+'")').text("");
+        $('#names').text(function(_,txt) {
+          var re = new RegExp(result.prevName,"g");
+          return txt.replace(re, '');
+        });
       }
       $('#names').append(result.name + "<br>");
       $('#names').scrollTop($('#names').prop('scrollHeight'));
