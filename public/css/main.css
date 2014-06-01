@@ -5,7 +5,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
   padding: 0;
 }
 /* Large Displays */
-@media (min-width: 980px) {
+@media all and (min-width: 699px) and (min-width: 520px), (min-width: 1151px), (min-width: 490px) {
   #content {
     width: 940px;
     margin-left: auto;
@@ -50,7 +50,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
   }
 }
 /* Landscape phones and down */
-@media (max-width: 480px){
+@media (max-width: 480px) {
   .copy{
     padding: 2.5% 10%;
   }
@@ -64,7 +64,11 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
     width: 100%;
     margin-top: -18px;
   }
-  #avRooms {
+  #right {
+    display: inline-block;
+    float: left;
+  }
+  #avRooms, #users_online {
     float: left;
     padding-left: 10%;
     overflow: auto;
@@ -79,6 +83,16 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
     width: 100px;
     overflow: auto;
     color: #ff0000;
+  }
+  #names {
+    margin-bottom: 5px;
+    margin-left: 10px;
+    width: 100px;
+    padding: 2px;
+    height: 105px;
+    overflow: auto;
+    background-color: #eee;
+    border-radius: 5px;
   }
   #room {
     width: 75%;
@@ -109,6 +123,7 @@ span {
   background-color: #ddd;
   margin-bottom: 1em;
   margin-left: 10px;
+  border-radius: 5px;
 }
 
 /* Message display area. Scrolling enabled when message box full. */
