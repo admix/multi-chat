@@ -23,6 +23,10 @@ app.use(function(err, req, res, next){
   res.send(500, { error: 'Sorry something bad happened!' });
 });
 
+app.use(function(req, res, next){
+  res.send(404, 'Sorry cant find that!');
+});
+
 // starting app server, the last function to call
 server.listen(port, function() {
   console.log("Server listening on port: " + port);
