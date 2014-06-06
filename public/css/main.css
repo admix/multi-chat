@@ -115,6 +115,9 @@ body {
   background: #0e1d3a url(../images/bg.png) top center no-repeat;
 }
 
+#err {
+  background: url(../images/404.psd) top center no-repeat;
+}
 a {
   color: #00B7FF;
 }
