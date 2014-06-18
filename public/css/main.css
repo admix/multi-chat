@@ -113,6 +113,9 @@ html, body {
 body {
   font: 14px "lucida Grande", Helvetica, Arial, sans-serif;
   background: -webkit-linear-gradient(#c4c4c4, #3D3C41);
+  background: -o-linear-gradient(#c4c4c4, #3D3C41);
+  background: -moz-linear-gradient(#c4c4c4, #3D3C41);
+  background: linear-gradient(#c4c4c4, #3D3C41);
 }
 
 .btn {
