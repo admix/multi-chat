@@ -112,9 +112,13 @@ html, body {
 }
 body {
   font: 14px "lucida Grande", Helvetica, Arial, sans-serif;
-  background: #0e1d3a url(../images/bg.png) top center no-repeat;
+  background: -webkit-linear-gradient(#c4c4c4, #3D3C41);
 }
 
+.btn {
+  background-color: #DBD840;
+  color: #3F4040;
+}
 #err {
   background: url(../images/404.psd) top center no-repeat;
 }
