@@ -157,6 +157,8 @@ span {
 }
 #msg_user {
   background-color: #83F03C;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 
 #msg_system {
