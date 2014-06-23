@@ -43,7 +43,17 @@ MongoClient.connect('mongodb://localhost:27017/emails', function(err, db) {
     app.post('/', function(req, res) {
       var email = req.body.email;
       console.log("email: " + email);
-      dba.addEmail(db, email);
+      var check = dba.checkEmail(db, email, function(err, msg) {
+          if(err) throw err;
+          return msg;
+          console.log("Checked: " + msg);
+      });
+      if(check != email) {
+        dba.addEmail(db, email, function(err, msg) {
+          if(err) throw err;
+          console.log("inserted: " + msg)
+        });
+      }
       console.log("after add");
       res.redirect('/');
     })
