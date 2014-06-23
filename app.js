@@ -6,6 +6,7 @@ var http = require("http"),
     habitat = require("habitat"),
     cons = require('consolidate'),
     dba = require('./public/js/db'),
+    validator = require('validator'),
     cache = {};
 
 var MongoClient = require("mongodb").MongoClient,
@@ -43,19 +44,23 @@ MongoClient.connect('mongodb://localhost:27017/emails', function(err, db) {
     app.post('/', function(req, res) {
       var email = req.body.email;
       console.log("email: " + email);
+      if (validator.isEmail(email)){
+        console.log("true email");
 
-      dba.checkEmail(db, email, function(err, msg) {
-        if(err) throw err;
-        if(msg != email) {
-          dba.addEmail(db, email, function(err, msg) {
-            if(err) throw err;
-            console.log("Added email: " + msg);
-          });
-        } else {
-          console.log("Not added");
-        }
-      });
-
+        dba.checkEmail(db, email, function(err, msg) {
+          if(err) throw err;
+          if(msg != email) {
+            dba.addEmail(db, email, function(err, msg) {
+              if(err) throw err;
+              console.log("Added email: " + msg);
+            });
+          } else {
+            console.log("Not added");
+          }
+        });
+      } else {
+        console.log("Bad email");
+      }
       res.redirect('/');
     })
     // starting app server, the last function to call
