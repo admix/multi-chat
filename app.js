@@ -43,18 +43,19 @@ MongoClient.connect('mongodb://localhost:27017/emails', function(err, db) {
     app.post('/', function(req, res) {
       var email = req.body.email;
       console.log("email: " + email);
-      var check = dba.checkEmail(db, email, function(err, msg) {
-          if(err) throw err;
-          return msg;
-          console.log("Checked: " + msg);
+
+      dba.checkEmail(db, email, function(err, msg) {
+        if(err) throw err;
+        if(msg != email) {
+          dba.addEmail(db, email, function(err, msg) {
+            if(err) throw err;
+            console.log("Added email: " + msg);
+          });
+        } else {
+          console.log("Not added");
+        }
       });
-      if(check != email) {
-        dba.addEmail(db, email, function(err, msg) {
-          if(err) throw err;
-          console.log("inserted: " + msg)
-        });
-      }
-      console.log("after add");
+
       res.redirect('/');
     })
     // starting app server, the last function to call
