@@ -46,22 +46,29 @@ MongoClient.connect('mongodb://localhost:27017/emails', function(err, db) {
       console.log("email: " + email);
       if (validator.isEmail(email)){
         console.log("true email");
-
-        dba.checkEmail(db, email, function(err, msg) {
+        dba.testEmail(db, email, function(err, msg) {
           if(err) throw err;
-          if(msg != email) {
-            dba.addEmail(db, email, function(err, msg) {
-              if(err) throw err;
-              console.log("Added email: " + msg);
-            });
+          if(msg == null) {
+            res.render(__dirname + "/public/" + 'index',{email:email + " added"});
           } else {
-            console.log("Not added");
+            res.render(__dirname + "/public/" + 'index',{email:email + " already used"});
+            console.log("Already exist");
           }
-        });
+        })
+        // dba.checkEmail(db, email, function(err, msg) {
+        //   if(err) throw err;
+        //   if(msg != email) {
+        //     dba.addEmail(db, email, function(err, msg) {
+        //       if(err) throw err;
+        //       console.log("Added email: " + msg);
+        //     });
+        //   } else {
+        //     console.log("Not added");
+        //   }
+        // });
       } else {
         console.log("Bad email");
       }
-      res.redirect('/');
     })
     // starting app server, the last function to call
     server.listen(port);
