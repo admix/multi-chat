@@ -7,11 +7,14 @@ var http = require("http"),
     cons = require('consolidate'),
     dba = require('./public/js/db'),
     validator = require('validator'),
+    nodemailer = require('nodemailer'),
+    sendEmail = require('./public/js/email'),
     cache = {};
 
 var MongoClient = require("mongodb").MongoClient,
     Server = require("mongodb").Server;
 habitat.load();
+
 var env = new habitat(),
     app = express(),
     server = http.createServer(app),
@@ -49,6 +52,7 @@ MongoClient.connect('mongodb://localhost:27017/emails', function(err, db) {
         dba.testEmail(db, email, function(err, msg) {
           if(err) throw err;
           if(msg == null) {
+            sendEmail.sendEmail(email);
             res.render(__dirname + "/public/" + 'index',{email:email + " added"});
           } else {
             res.render(__dirname + "/public/" + 'index',{email:email + " already used"});
